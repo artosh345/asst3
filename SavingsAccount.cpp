@@ -22,7 +22,34 @@ void SavingsAccount::Deposit(double deposit) {
     this->deposit=deposit;
     balance=balance+deposit* Interest(deposit);
 }
-/*double SavingsAccount::getBalance() {
+void SavingsAccount::withdraw(double money) {
+    balance=balance-money;
+}
+double SavingsAccount::getBalance() {
     return balance;
 }
-*/
+void SavingsAccount::Print() {
+    cout<<name<<" ";
+    switch (currency){
+        case 0:
+        {
+            cout<<balance<<"Tg ";
+            cout<<balance*520<<"Eu ";
+            cout<<balance*425<<"USD ";
+            break;
+        }
+        case 1:
+        {
+            cout<<balance*520<<"Tg  ";
+            cout<<balance<<"Eu ";
+            cout<<balance/425*520<<"USD ";
+            break;
+        }
+        case 2:
+        {
+            cout<<balance*425<<"Tg  ";
+            cout<<balance*425/520<<"Eu ";
+            cout<<balance<<"USD ";
+            break;
+        }}
+}

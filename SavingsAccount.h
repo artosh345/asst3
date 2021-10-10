@@ -15,7 +15,10 @@ private:
 public:
     double Interest(double deposit);
     void Deposit(double deposit);
-   // double getBalance();
+    double getBalance();
+    void withdraw(double money);
+    void Print();
+
 };
 
 

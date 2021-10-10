@@ -10,7 +10,7 @@
 
 
 using namespace std;
-class Account{
+class Account {
 private:
 
 protected:
@@ -26,9 +26,11 @@ public:
     int getCurrency();
     string getName();
     double getBalance();
-    void Deposit(double deposit);
+    virtual void Deposit(double deposit)=0;
     void to_string();
-    void withdraw(double money);
+    virtual void withdraw(double money)=0;
+    virtual void Print()=0;
+    void redistribution(double tenge);
 };
 
 

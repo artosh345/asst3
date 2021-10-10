@@ -6,7 +6,6 @@
 #include <iostream>
 #include <string>
 
-
 using namespace std;
 Account::Account() {
     name="Unnamed account";
@@ -41,6 +40,26 @@ void Account::setCurrency(int currency) {
 }
 int Account::getCurrency() {
     return currency;
+}
+void Account::redistribution(double tenge) {
+    switch (currency){
+        case 0:
+        {
+            balance=balance+tenge;
+            break;
+        }
+        case 1:
+        {
+
+            balance=balance+tenge/520;
+
+            break;
+        }
+        case 2:
+        {
+            balance=balance+tenge/425;
+            break;
+        }}
 }
 /*void Account::to_string() {
     cout<<"Account holder:  "<<name<<endl<<"Balance:  "<<get;
